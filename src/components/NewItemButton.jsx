@@ -42,7 +42,8 @@ const NewItemButton = ({listItems, setListItems}) => {
             return {name, quantity, unit};
           }
         })
-        console.log(value);
+
+        if(!value.name || !value.quantity || !value.unit) return
 
     setListItems([
         ...listItems,
@@ -53,6 +54,7 @@ const NewItemButton = ({listItems, setListItems}) => {
         }
     ])
     }
+    
   return (
     <button 
         type="button" 
